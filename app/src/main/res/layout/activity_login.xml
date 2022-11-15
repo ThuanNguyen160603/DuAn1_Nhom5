@@ -8,7 +8,7 @@
 
 
     <View
-        android:id="@+id/view1"
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="0dp"
@@ -65,7 +65,7 @@
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <EditText
-        android:id="@+id/textView"
+        android:id="@+id/txtUserName"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="208dp"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <EditText
-        android:id="@+id/textView2"
+        android:id="@+id/txtPassword"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="320dp"
@@ -89,12 +89,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="472dp"
+        android:layout_marginTop="476dp"
         android:text="Quên mật khẩu?"
         app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view1" />
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <Button
         android:layout_width="120dp"

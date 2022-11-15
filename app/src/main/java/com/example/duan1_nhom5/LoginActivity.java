@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         //ánh xạ
         btnSignInButton = findViewById(R.id.btnSignInGoogle);
         btnLogout = findViewById(R.id.btnLogout);
-
+        //login google
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
