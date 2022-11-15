@@ -28,8 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        ></View>
+        app:layout_constraintTop_toTopOf="parent"></View>
 
     <TextView
         android:id="@+id/textView3"
@@ -55,6 +54,7 @@
         app:layout_constraintVertical_bias="0.067" />
 
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="172dp"
@@ -122,5 +122,48 @@
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
+        <LinearLayout
+            android:layout_width="58dp"
+            android:layout_height="47dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.259"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.948">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="58dp"
+                android:layout_height="47dp"
+                app:cardCornerRadius="10dp">
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/btnSignInGoogle"
+                    android:layout_width="58dp"
+                    android:layout_height="47dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.209"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.858" />
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="596dp"
+        android:text="Logout"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
