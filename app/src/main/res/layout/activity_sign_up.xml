@@ -42,11 +42,27 @@
         app:layout_constraintVertical_bias="0.067" />
 
     <EditText
-        android:id="@+id/txtUserName_Signup"
+        android:id="@+id/edtEmailSignUp"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="312dp"
         android:background="@drawable/edittext_custom"
+        android:hint="Email"
+        android:padding="10dp"
+        android:shadowRadius="@integer/material_motion_duration_long_1"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+
+    <EditText
+        android:id="@+id/edtNameSignUp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="232dp"
+        android:background="@drawable/edittext_custom"
+        android:hint="Email"
+        android:padding="10dp"
         android:shadowRadius="@integer/material_motion_duration_long_1"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintHorizontal_bias="0.462"
@@ -54,14 +70,15 @@
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <EditText
-        android:id="@+id/txtPassword_Signup"
+        android:id="@+id/edtPasswordSignup"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="388dp"
         android:background="@drawable/edittext_custom"
+        android:hint="Password"
+        android:padding="10dp"
         android:shadowRadius="@integer/material_motion_duration_long_1"
         app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
@@ -69,7 +86,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="436dp"
         android:text="Nhập lại mật khẩu"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintHorizontal_bias="0.169"
@@ -77,21 +94,36 @@
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <EditText
-        android:id="@+id/txtPassword"
+        android:id="@+id/edtRePassword"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginTop="468dp"
         android:background="@drawable/edittext_custom"
+        android:hint="Confirm password"
+        android:padding="10dp"
         android:shadowRadius="@integer/material_motion_duration_long_1"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
+        android:id="@+id/btnSignup"
         android:layout_width="120dp"
         android:layout_height="25dp"
-        android:layout_marginTop="468dp"
+        android:layout_marginTop="520dp"
         android:background="@drawable/button_custom"
         android:text="sign up"
         android:textAlignment="center"
@@ -103,7 +135,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="284dp"
         android:text="Tên đăng nhập"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintHorizontal_bias="0.156"
@@ -114,10 +146,10 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="360dp"
         android:text="Mật khẩu"
         app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3" />
 

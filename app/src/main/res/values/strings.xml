@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DuAn1_Nhom5</string>
+    <string name="already_have_account_sign_up">New user?? <b>Sign up</b></string>
 </resources>

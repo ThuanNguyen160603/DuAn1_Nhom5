@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.duan1_nhom5.databinding.ActivityLoginBinding;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -24,6 +25,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class LoginActivity extends AppCompatActivity {
+    private ActivityLoginBinding binding;
     GoogleSignInClient mGoogleSignInClient;
     SignInButton btnSignInButton;
     Button btnLogout;
@@ -31,7 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         //ánh xạ
         btnSignInButton = findViewById(R.id.btnSignInGoogle);
         btnLogout = findViewById(R.id.btnLogout);
@@ -41,6 +44,20 @@ public class LoginActivity extends AppCompatActivity {
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        binding.noaccountTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+            }
+        });
+
+        binding.btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+            }
+        });
 
         btnSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, "Đăng nhập thành công - " + displayName + " - " + email, Toast.LENGTH_SHORT).show();
                             btnSignInButton.setVisibility(View.GONE);
                             btnLogout.setVisibility(View.VISIBLE);
-                            Intent homeIntent = new Intent(LoginActivity.this, MainActivity.class);
+                            Intent homeIntent = new Intent(LoginActivity.this, ProfileActivity.class);
                             startActivity(homeIntent);
                             finish();
                         } catch (ApiException e) {

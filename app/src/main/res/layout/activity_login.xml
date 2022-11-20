@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back03"
     tools:context=".LoginActivity">
 
 
@@ -28,7 +29,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></View>
+        app:layout_constraintTop_toTopOf="parent">
+
+    </View>
 
     <TextView
         android:id="@+id/textView3"
@@ -37,7 +40,7 @@
         android:layout_marginTop="284dp"
         android:text="Mật khẩu"
         app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
@@ -57,39 +60,75 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
-        android:text="Tên đăng nhập"
+        android:layout_marginTop="176dp"
+        android:text="Tên đăng nhập / email"
         app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
-    <EditText
-        android:id="@+id/txtUserName"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="250dp"
-        android:layout_height="40dp"
+        android:layout_height="47dp"
         android:layout_marginTop="208dp"
-        android:background="@drawable/edittext_custom"
-        android:shadowRadius="@integer/material_motion_duration_long_1"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3" />
+        app:layout_constraintTop_toTopOf="@+id/view3">
 
-    <EditText
-        android:id="@+id/txtPassword"
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="208dp"
+            android:background="@drawable/edittext_custom"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:shadowRadius="@integer/material_motion_duration_long_1"
+            android:textColor="@color/gray01"
+            app:layout_constraintEnd_toEndOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="320dp"
-        android:background="@drawable/edittext_custom"
-        android:shadowRadius="@integer/material_motion_duration_long_1"
+        android:layout_height="56dp"
+        android:layout_marginTop="306dp"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3" />
+        app:layout_constraintTop_toTopOf="@+id/view3">
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="320dp"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_lock"
+            android:padding="5dp"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:textColor="@color/gray01"
+            android:background="@drawable/edittext_custom"
+            android:shadowRadius="@integer/material_motion_duration_long_1"
+            app:layout_constraintEnd_toEndOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/forgotpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="476dp"
+        android:layout_marginTop="456dp"
         android:text="Quên mật khẩu?"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintHorizontal_bias="0.826"
@@ -97,61 +136,44 @@
         app:layout_constraintTop_toTopOf="@+id/view" />
 
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="120dp"
         android:layout_height="25dp"
-        android:layout_marginTop="448dp"
-        android:textAlignment="center"
+        android:layout_marginTop="408dp"
         android:background="@drawable/button_custom"
+        android:text="Login"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:text="login"
         app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3" />
+
 
     <Button
+        android:id="@+id/btnSignUp"
         android:layout_width="120dp"
         android:layout_height="25dp"
-        android:textAlignment="center"
-        android:layout_marginTop="448dp"
+        android:layout_marginTop="408dp"
         android:background="@drawable/button_custom"
-        android:textColor="@color/white"
         android:text="sign up"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
-        <LinearLayout
-            android:layout_width="58dp"
-            android:layout_height="47dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.259"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.948">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="58dp"
-                android:layout_height="47dp"
-                app:cardCornerRadius="10dp">
-
-                <com.google.android.gms.common.SignInButton
-                    android:id="@+id/btnSignInGoogle"
-                    android:layout_width="58dp"
-                    android:layout_height="47dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.209"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.858" />
-
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btnSignInGoogle"
+        android:layout_width="58dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="544dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnLogout"
@@ -162,7 +184,20 @@
         android:textSize="14dp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintHorizontal_bias="0.273"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/noaccountTv"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="608dp"
+        android:text="@string/already_have_account_sign_up"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

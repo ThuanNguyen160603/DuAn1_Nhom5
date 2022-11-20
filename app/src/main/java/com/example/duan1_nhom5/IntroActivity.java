@@ -21,7 +21,7 @@ public class IntroActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(IntroActivity.this, LoginActivity.class));
+                startActivity(new Intent(IntroActivity.this, MainActivity.class));
             }
         },4000);
     }
