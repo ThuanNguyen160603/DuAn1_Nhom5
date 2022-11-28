@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/icon_navigation"
+        android:title="Đồ ăn"
+        android:id="@+id/Food1"/>
+
+    <item android:icon="@drawable/icon_navigation"
+        android:title="Đồ ăn"
+        android:id="@+id/Food2"/>
+
+    <item android:icon="@drawable/icon_navigation"
+        android:title="Đồ ăn"
+        android:id="@+id/Food3"/>
+
+    <item android:title="Mục 2">
+        <menu>
+            <item android:icon="@drawable/icon_navigation"
+                android:title="Đồ ăn"
+                android:id="@+id/Food4"/>
+            <item android:icon="@drawable/icon_navigation"
+                android:title="Đồ ăn"
+                android:id="@+id/Food5"/>
+
+        </menu>
+    </item>
+
+    <item android:title="Mục 3">
+        <menu>
+            <item android:icon="@drawable/icon_navigation"
+                android:title="Đồ ăn"
+                android:id="@+id/Food6"/>
+            <item android:icon="@drawable/icon_navigation"
+                android:title="Đồ ăn"
+                android:id="@+id/Food7"/>
+
+        </menu>
+    </item>
+</menu>
