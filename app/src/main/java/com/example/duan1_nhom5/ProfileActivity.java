@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.ListView;
 
 import com.example.duan1_nhom5.fragment.QlMenu2;
 import com.example.duan1_nhom5.fragment.QlMenuFragment;
@@ -19,6 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class ProfileActivity extends AppCompatActivity {
     DrawerLayout DrawerLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,7 @@ public class ProfileActivity extends AppCompatActivity {
         FrameLayout frameLayout = findViewById(R.id.frameLayout);
         NavigationView navigationView = findViewById(R.id.NavigationView);
         DrawerLayout = findViewById(R.id.DrawerLayout);
+        ListView PAListView = findViewById(R.id.PAListView);
 
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
