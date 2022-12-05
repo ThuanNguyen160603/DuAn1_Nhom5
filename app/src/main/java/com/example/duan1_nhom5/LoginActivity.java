@@ -241,7 +241,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, "Đăng nhập thành công - " + displayName + " - " + email, Toast.LENGTH_SHORT).show();
                             btnSignInButton.setVisibility(View.GONE);
                             btnLogout.setVisibility(View.VISIBLE);
-                            Intent homeIntent = new Intent(LoginActivity.this, ProfileActivity.class);
+                            Intent homeIntent = new Intent(LoginActivity.this, DashBoardAdminActivity.class);
                             startActivity(homeIntent);
                             finish();
                         } catch (ApiException e) {
