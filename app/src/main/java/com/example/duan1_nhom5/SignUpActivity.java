@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class SignUpActivity extends AppCompatActivity {
     private ActivitySignUpBinding binding;
-    //firebase auth
+    //firebase auth//////////
     private FirebaseAuth firebaseAuth;
 
     //progress dialog
